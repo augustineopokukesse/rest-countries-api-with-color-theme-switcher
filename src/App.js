@@ -1,13 +1,5 @@
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        Initialize Rest Countries API Project  
-      </header>
-    </div>
-  );
-}
+function App() {}
 
 export default App;
