@@ -1,5 +1,5 @@
 import React from "react";
-import Countries from "./components/Countries";
+import Countries from "./components/all_Countries";
 
 function App() {
   return (

@@ -11,7 +11,7 @@ const Countries = () => {
     const response = await fetch(url);
     const countries = await response.json();
     setCountries(countries);
-    console.log(countries);
+    // console.log(countries);
   };
   useEffect(() => {
     fetchCountryData();
