@@ -3,8 +3,10 @@ import React, { useState, useEffect } from "react";
 const url = "https://restcountries.com/v2/all";
 
 const Countries = () => {
+  // setting state values
   const [countries, setCountries] = useState([]);
 
+  // fetching data from the url
   const fetchCountryData = async () => {
     const response = await fetch(url);
     const countries = await response.json();
@@ -15,6 +17,7 @@ const Countries = () => {
     fetchCountryData();
   }, []);
 
+  //   Map over countires data and display every details needed
   return (
     <>
       <section className="grid">
