@@ -1,12 +1,11 @@
-import './App.css';
+import React from "react";
+import Countries from "./components/all_Countries";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Initialize Rest Countries API Project  
-      </header>
-    </div>
+    <>
+      <Countries />
+    </>
   );
 }
 
