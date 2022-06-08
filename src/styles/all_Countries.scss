@@ -7,7 +7,7 @@ $grid-columns: 12;
 // base layout
 .grid-container{
     width: 100%;
-    max-width: 1200px;
+    // max-width: 1200px;
     margin: 0 auto;
     padding: 20px 20px;
     box-sizing: border-box;
@@ -29,7 +29,20 @@ $grid-columns: 12;
     box-shadow: 0.5rem 0.5rem 2rem -1rem rgb(58, 57, 57);
     border-radius: 1rem;
     background-color: white;
-    height: 300px;
+    height: 350px;
+    .country-flag{
+        height: 50%;
+        width: 100%;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 1rem 1rem 0 0;
+        }
+    }
+    .country-info{
+        padding-top: 20px;
+    }
 }
 
 // // column classes
