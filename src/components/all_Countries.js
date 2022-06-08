@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../styles/all_Countries.scss"
 
 const url = "https://restcountries.com/v2/all";
 
@@ -20,14 +21,14 @@ const Countries = () => {
   //   Map over countires data and display every details needed
   return (
     <>
-      <section className="grid">
+      <section className="grid-container">
         {countries.map((country) => {
           const { numericCode, name, population, region, capital, flag } =
             country;
 
           return (
             <article key={numericCode}>
-              <div>
+              <div className="countries">
                 <img src={flag} alt={name} />
                 <h3>{name}</h3>
                 <h4>

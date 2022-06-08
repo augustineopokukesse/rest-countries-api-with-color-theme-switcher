@@ -1,0 +1,11 @@
+$grid-columns: 12;
+
+.grid-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: aqua;
+    .countries{
+        width: 300px;
+    }
+}
