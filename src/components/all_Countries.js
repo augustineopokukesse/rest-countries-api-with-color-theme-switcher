@@ -35,13 +35,13 @@ const Countries = () => {
                 <div className="country-info">
                   <h3>{name}</h3>
                   <h4>
-                    Population: <span>{population}</span>
+                    <strong>Population</strong>: <span>{population}</span>
                   </h4>
                   <h4>
-                    Region: <span>{region}</span>
+                  <strong>Region</strong>: <span>{region}</span>
                   </h4>
                   <h4>
-                    Capital: <span>{capital}</span>
+                  <strong>Capital</strong>: <span>{capital}</span>
                   </h4>
                 </div>
               </div>
