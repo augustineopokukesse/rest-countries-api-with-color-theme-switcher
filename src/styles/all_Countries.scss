@@ -1,11 +1,28 @@
+@import 'breakpoints';
+@use "sass:math";
+
 $grid-columns: 12;
 
+// base layout
 .grid-container{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
     background-color: aqua;
+    @include md {
+        background-color: pink;
+    }
     .countries{
         width: 300px;
     }
 }
+
+//row of grid elements
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// column classes
