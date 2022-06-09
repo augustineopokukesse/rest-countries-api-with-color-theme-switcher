@@ -9,7 +9,7 @@ $grid-columns: 12;
     width: 100%;
     // max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 20px 40px;
     box-sizing: border-box;
     background-color: #F2F2F2;
     display: grid;
@@ -29,7 +29,7 @@ $grid-columns: 12;
     box-shadow: 0.5rem 0.5rem 2rem -1rem rgb(58, 57, 57);
     border-radius: 0.5rem;
     background-color: white;
-    height: 350px;
+    height: 336px;
     .country-flag{
         height: 50%;
         width: 100%;
