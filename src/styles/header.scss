@@ -2,10 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 5;
     width: 100%;
     box-sizing: border-box;
     padding: 20px 40px;
     background-color: white;
+    box-shadow: 0.5rem 0.5rem 2rem -1rem rgb(58, 57, 57);
     h1{
         font-size: 22px;
     }
