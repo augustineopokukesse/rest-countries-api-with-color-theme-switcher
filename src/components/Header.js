@@ -5,7 +5,7 @@ function Header(){
         <>
           <header className="header">
             <div>
-                <h1>Where in the world?</h1>
+                <h1 className="white dark">Where in the world?</h1>
             </div>
             <div>
                 {<Toggle/>}
