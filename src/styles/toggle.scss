@@ -1,9 +1,19 @@
 .modeButton{
     padding: 10px;
     border: none;
+    background-color: inherit;
     cursor: pointer;
+    .iconColor{
+        color: white;
+    }
     .modeText{
         margin-left: 5px;
         font-weight: bold;
     }
 }
+
+.dark{
+    background-color: #202C36;
+    color: #f7f4f4;
+  }
+  

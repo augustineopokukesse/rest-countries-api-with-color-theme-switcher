@@ -27,8 +27,8 @@ const Countries = () => {
             country;
 
           return (
-            <article key={numericCode}>
-              <div className="countries">
+            <article key={numericCode}> 
+              <div className="countries darktheme" id="darkthemeCountries">
                 <div className="country-flag">
                   <img src={flag} alt={name} />
                 </div>
