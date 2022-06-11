@@ -44,7 +44,7 @@ const Countries = () => {
                   <h4>
                     <strong>Capital</strong>: <span>{capital}</span>
                   </h4>
-                  <Link>Learn More</Link>
+                  <Link to={`/countries/${name}`}>Learn More</Link>
                 </div>
               </div>
             </article>

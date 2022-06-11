@@ -9,11 +9,11 @@ function App() {
     <Router>
       <Header />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Countries />
         </Route>
+        <Route path="/countries/:name" children={<Country />}></Route>
       </Switch>
-      <Route path="/countries/:name" children={<Country />}></Route>
     </Router>
   );
 }
