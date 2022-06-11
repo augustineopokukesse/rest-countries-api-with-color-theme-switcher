@@ -1,11 +1,14 @@
 import React from "react";
-import Countries from "./components/all_Countries";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Countries from "./components/Countries";
 
 function App() {
   return (
-    <>
-      <Countries />
-    </>
+    <Router>
+      <Route exact path="/">
+        <Countries />
+      </Route>
+    </Router>
   );
 }
 

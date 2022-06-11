@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/all_Countries.scss"
+import "../styles/all_Countries.scss";
 
 const url = "https://restcountries.com/v2/all";
 
@@ -38,10 +38,10 @@ const Countries = () => {
                     <strong>Population</strong>: <span>{population}</span>
                   </h4>
                   <h4>
-                  <strong>Region</strong>: <span>{region}</span>
+                    <strong>Region</strong>: <span>{region}</span>
                   </h4>
                   <h4>
-                  <strong>Capital</strong>: <span>{capital}</span>
+                    <strong>Capital</strong>: <span>{capital}</span>
                   </h4>
                 </div>
               </div>
