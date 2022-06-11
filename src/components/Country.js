@@ -43,6 +43,7 @@ const Country = () => {
               <div className="flag">
                 <img src={flag} alt={name}></img>
               </div>
+              {/* divs */}
               <div className="country-details">
                 <div>
                   <h2>{name}</h2>
