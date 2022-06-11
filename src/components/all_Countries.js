@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../styles/all_Countries.scss";
 
 const url = "https://restcountries.com/v2/all";
@@ -43,7 +44,7 @@ const Countries = () => {
                   <h4>
                     <strong>Capital</strong>: <span>{capital}</span>
                   </h4>
-                  <Link to={`/countries/${name}`}></Link>
+                  <Link>Learn More</Link>
                 </div>
               </div>
             </article>
