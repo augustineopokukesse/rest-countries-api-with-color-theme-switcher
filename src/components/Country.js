@@ -6,6 +6,7 @@ const Country = () => {
   const [country, setCountry] = useState([]);
   const { name } = useParams();
 
+  //   fetching data from url
   useEffect(() => {
     const fetchCountry = async () => {
       const response = await fetch(`https://restcountries.com/v2/name/${name}`);
@@ -17,6 +18,7 @@ const Country = () => {
     fetchCountry();
   });
 
+  //   render infromation on page
   return (
     <>
       <section className="country">
