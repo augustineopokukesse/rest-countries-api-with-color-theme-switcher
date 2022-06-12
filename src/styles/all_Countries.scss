@@ -56,7 +56,11 @@ $grid-columns: 12;
         }
     }
 }
-
+.linkStyle{
+    text-decoration: none;
+    background-color: inherit;
+    color: inherit;
+}
 // // column classes
 // @include xs {
 //     @for $i from 1 through $grid-columns {

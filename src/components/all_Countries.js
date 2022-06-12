@@ -28,26 +28,28 @@ const Countries = () => {
             country;
 
           return (
-            <article key={numericCode}>
-              <div className="countries darktheme" id="darkthemeCountries">
-                <div className="country-flag">
-                  <img src={flag} alt={name} />
+            <Link to={`/countries/${name}`} className="linkStyle">
+              <article key={numericCode}>
+                <div className="countries darktheme">
+                  <div className="country-flag">
+                    <img src={flag} alt={name} />
+                  </div>
+                  <div className="country-info">
+                    <h3>{name}</h3>
+                    <h4>
+                      <strong>Population</strong>: <span>{population}</span>
+                    </h4>
+                    <h4>
+                      <strong>Region</strong>: <span>{region}</span>
+                    </h4>
+                    <h4>
+                      <strong>Capital</strong>: <span>{capital}</span>
+                    </h4>
+                    
+                  </div>
                 </div>
-                <div className="country-info">
-                  <h3>{name}</h3>
-                  <h4>
-                    <strong>Population</strong>: <span>{population}</span>
-                  </h4>
-                  <h4>
-                    <strong>Region</strong>: <span>{region}</span>
-                  </h4>
-                  <h4>
-                    <strong>Capital</strong>: <span>{capital}</span>
-                  </h4>
-                  <Link to={`/countries/${name}`}>Learn More</Link>
-                </div>
-              </div>
-            </article>
+              </article>
+            </Link>
           );
         })}
       </section>
