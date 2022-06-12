@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import { useParams } from "react-router-dom";
+import "../styles/country.scss";
 
 const Country = () => {
   const [country, setCountry] = useState([]);
@@ -21,7 +22,7 @@ const Country = () => {
   //   render infromation on page
   return (
     <>
-      <section className="country">
+      <section className="country-container">
         {country.map((c) => {
           const {
             numericCode,
@@ -39,7 +40,7 @@ const Country = () => {
           } = c;
 
           return (
-            <article key={numericCode}>
+            <article key={numericCode} className="country">
               <div className="flag">
                 <img src={flag} alt={name}></img>
               </div>
