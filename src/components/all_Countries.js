@@ -7,12 +7,14 @@ const url = "https://restcountries.com/v2/all";
 const Countries = () => {
   // setting state values
   const [countries, setCountries] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   // fetching data from the url
   const fetchCountryData = async () => {
     const response = await fetch(url);
     const countries = await response.json();
     setCountries(countries);
+    setIsLoading(false);
     // console.log(countries);
   };
   useEffect(() => {
@@ -22,13 +24,18 @@ const Countries = () => {
   //   Map over countires data and display every details needed
   return (
     <>
-      <section className="grid-container">
+      {isLoading ? (
+        <div className="loadingState">
+          <h1> Loading ...</h1>
+        </div>
+      ) : (
+        <section className="grid-container">
         {countries.map((country) => {
           const { numericCode, name, population, region, capital, flag } =
             country;
 
           return (
-            <Link to={`/countries/${name}`} className="linkStyle">
+            <Link to={`/countries/${name}`} className="linkStyle darktheme">
               <article key={numericCode}>
                 <div className="countries darktheme">
                   <div className="country-flag">
@@ -53,6 +60,7 @@ const Countries = () => {
           );
         })}
       </section>
+      )}
     </>
   );
 };

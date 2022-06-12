@@ -4,6 +4,15 @@
 
 $grid-columns: 12;
 
+.loadingState{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    // position: absolute;
+    // top: 50%;
+    // margin: auto;
+}
 // base layout
 .grid-container{
     width: 100%;
@@ -58,9 +67,10 @@ $grid-columns: 12;
 }
 .linkStyle{
     text-decoration: none;
-    background-color: inherit;
-    color: inherit;
+    color: black;
 }
+
+
 // // column classes
 // @include xs {
 //     @for $i from 1 through $grid-columns {
