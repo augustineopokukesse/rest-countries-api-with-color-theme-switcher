@@ -1,14 +1,46 @@
 .country {
     display: flex;
-    background-color: aqua;
+    // background-color: aqua;
     width: 80%;
     margin: 0 auto;
     // margin-top: 100px;
-    height: auto;
+    height: 50vh;
     position: relative;
-    top: 100px;
+    top: 250px;
     .flag{
         width: 40%;
-        height: 40%;
+        height: 100%;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            // border-radius: 0.5rem 0.5rem 0 0;
+        }
     }
+    .country-details {
+        display: block;
+        width: 40%;
+        height: 70%;
+        // margin: auto 0;
+        padding: 5% 10%;
+        .country-name {
+            padding-bottom: 20px;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+            line-height: 23px;
+            padding-bottom: 50px;
+            // margin: auto;
+        }
+    }
+}
+
+.back-link {
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 150px;
+    background-color: aqua;
+    margin-left: 10%;
 }
