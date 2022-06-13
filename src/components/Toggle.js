@@ -10,6 +10,7 @@ function Toggle(){
         document.body.classList.toggle("dark");
         //document.getElementById("darktheme").classList.toggle("dark");
         document.getElementsByClassName("modeText")[0].classList.toggle("dark");
+        document.getElementsByClassName("link")[0].classList.toggle("dark");
         const allClasses = document.getElementsByClassName("darktheme");
         for (let i = 0; i < allClasses.length; i++){
             allClasses[i].classList.toggle("dark");

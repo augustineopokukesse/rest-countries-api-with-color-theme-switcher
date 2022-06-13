@@ -37,10 +37,18 @@
 }
 
 .back-link {
-    width: 200px;
-    height: 50px;
+    width: 120px;
+    height: 40px;
     position: relative;
     top: 150px;
-    background-color: aqua;
+    // background-color: aqua;
     margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    .link{
+        text-decoration: none;
+        color: black;
+    }
 }
