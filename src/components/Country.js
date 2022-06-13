@@ -23,7 +23,7 @@ const Country = () => {
   return (
     <>
       <div className="back-link">
-      <Link to="/" className="link darktheme">Back</Link>
+      <Link to="/" className="link"><span className="darktheme">Back</span></Link>
       </div>
       <section className="country-container">
         {country.map((c) => {
