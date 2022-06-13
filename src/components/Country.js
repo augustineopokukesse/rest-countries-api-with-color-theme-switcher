@@ -25,7 +25,7 @@ const Country = () => {
   return (
     <>
       <div className="back-link">
-      <Link to="/" className="link"><span className="link-text darktheme">Back</span></Link>
+      <Link to="/" className="link">&larr; <span className="link-text darktheme">Back</span></Link>
       </div>
       {isLoading ? (
         <div className="loadingState">
