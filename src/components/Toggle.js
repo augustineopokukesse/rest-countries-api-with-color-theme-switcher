@@ -6,7 +6,6 @@ function Toggle(){
     const [darkMode, setDarkMode] = useState(false)
 
     const changeTheme = () => {
-        setDarkMode(!darkMode);
         document.body.classList.toggle("dark");
         //document.getElementById("darktheme").classList.toggle("dark");
         document.getElementsByClassName("modeText")[0].classList.toggle("dark");
@@ -16,6 +15,7 @@ function Toggle(){
             allClasses[i].classList.toggle("dark");
         }
         //document.getElementById("darkthemeCountries").classList.toggle("dark");
+        setDarkMode(!darkMode);
     }
     return (
         <>

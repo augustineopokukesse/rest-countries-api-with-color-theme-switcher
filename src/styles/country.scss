@@ -41,7 +41,7 @@
     height: 40px;
     position: relative;
     top: 140px;
-    // background-color: aqua;
+    // background-color: #F2F2F2;
     margin-left: 10%;
     display: flex;
     justify-content: center;
@@ -50,5 +50,10 @@
     .link{
         text-decoration: none;
         color: black;
+        // .link-text {
+        //     // color: black;
+        //     // background-color: #F2F2F2;
+        // }
+        // background-color: inherit;
     }
 }
