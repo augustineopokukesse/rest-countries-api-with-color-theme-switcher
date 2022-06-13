@@ -5,6 +5,7 @@ import "../styles/country.scss";
 
 const Country = () => {
   const [country, setCountry] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const { name } = useParams();
 
   //   fetching data from url
@@ -13,6 +14,7 @@ const Country = () => {
       const response = await fetch(`https://restcountries.com/v2/name/${name}`);
       const country = await response.json();
       setCountry(country);
+      setIsLoading(false);
       //   console.log(country);
     };
 
@@ -25,7 +27,12 @@ const Country = () => {
       <div className="back-link">
       <Link to="/" className="link"><span className="link-text darktheme">Back</span></Link>
       </div>
-      <section className="country-container">
+      {isLoading ? (
+        <div className="loadingState">
+          <h1>Loading ...</h1>
+        </div>
+      ) : (
+        <section className="country-container">
         {country.map((c) => {
           const {
             numericCode,
@@ -90,6 +97,7 @@ const Country = () => {
           );
         })}
       </section>
+      )}
     </>
   );
 };
