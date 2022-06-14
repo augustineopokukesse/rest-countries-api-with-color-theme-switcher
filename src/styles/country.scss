@@ -1,15 +1,29 @@
+@import "breakpoints.scss";
 .country {
+    box-sizing: border-box;
     display: flex;
     // background-color: aqua;
-    width: 80%;
-    margin: 0 auto;
-    // margin-top: 100px;
+    width: 100%;
+    padding-left: 10%;
+    // margin: 0 auto;
+    // margin-right: 0;
     height: 50vh;
     position: relative;
     top: 200px;
+    @include media ("<=1020px") {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
     .flag{
         width: 40%;
         height: 100%;
+        @include media ("<=1020px") {
+            width: 60%;
+            padding: 0;
+            margin: 0 auto;
+        }
         img{
             height: 100%;
             width: 100%;
@@ -23,6 +37,11 @@
         height: 70%;
         // margin: auto 0;
         padding: 2% 0 2% 10%;
+        @include media ("<=1020px") {
+            width: 60%;
+            padding: 5% 0;
+            margin: 0 auto;
+        }
         .country-name {
             padding-bottom: 20px;
             font-size: 1.3rem;
