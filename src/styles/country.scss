@@ -22,16 +22,22 @@
         width: 40%;
         height: 70%;
         // margin: auto 0;
-        padding: 5% 10%;
+        padding: 2% 0 2% 10%;
         .country-name {
             padding-bottom: 20px;
+            font-size: 1.3rem;
         }
         .details {
             display: flex;
             justify-content: space-between;
             line-height: 23px;
             padding-bottom: 50px;
+            // width: 100%;
             // margin: auto;
+            font-size: 1.2rem;
+            .info-text{
+                font-weight: 400;
+            }
         }
     }
 }

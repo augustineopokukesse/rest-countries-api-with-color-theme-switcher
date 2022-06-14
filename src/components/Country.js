@@ -62,30 +62,30 @@ const Country = () => {
                 <div className="details">
                   <div>
                     <h5>
-                      Native Name: <span>{nativeName}</span>
+                      Native Name: <span className="info-text">{nativeName}</span>
                     </h5>
                     <h5>
-                      Population: <span>{population}</span>
+                      Population: <span className="info-text">{population}</span>
                     </h5>
                     <h5>
-                      Region: <span>{region}</span>
+                      Region: <span className="info-text">{region}</span>
                     </h5>
                     <h5>
-                      Sub Region: <span>{subregion}</span>
+                      Sub Region: <span className="info-text">{subregion}</span>
                     </h5>
                     <h5>
-                      Capital: <span>{capital}</span>
+                      Capital: <span className="info-text">{capital}</span>
                     </h5>
                   </div>
                   <div>
                     <h5>
-                      Top Level Domain: <span>{topLevelDomain}</span>
+                      Top Level Domain: <span className="info-text">{topLevelDomain}</span>
                     </h5>
                     <h5>
-                      Currencies: <span>{currencies[0].name}</span>
+                      Currencies: <span className="info-text">{currencies[0].name}</span>
                     </h5>
                     <h5>
-                      Languages: <span>{languages[0].name}</span>
+                      Languages: <span className="info-text">{languages[0].name}</span>
                     </h5>
                   </div>
                 </div>
