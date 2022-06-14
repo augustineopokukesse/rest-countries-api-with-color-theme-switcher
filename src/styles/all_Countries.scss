@@ -1,8 +1,8 @@
-@use "sass:math";
-@import 'breakpoints';
+// @use "sass:math";
+@import 'breakpoints.scss';
 
 
-$grid-columns: 12;
+//$grid-columns: 12;
 
 .loadingState{
     display: flex;
@@ -23,13 +23,40 @@ $grid-columns: 12;
     // background-color: #F2F2F2;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap : 60px 50px;
-    // @include md {
-    //     background-color: pink;
-    // }
-    // .countries{
-    //     width: 300px;
-    // }
+    grid-gap : 50px;
+    @include media ('<=1200px') {
+        grid-template-columns: repeat(3,1fr);
+    }
+    @include media ('<=tablet') {
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include media ('<=550px') {
+        grid-template-columns: repeat(2,1fr);
+        // padding-left: 20px;
+        grid-gap : 30px;
+    }
+    @include media ('<=495px') {
+        grid-template-columns: repeat(1,1fr);
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    @include media ('<=440px') {
+        grid-template-columns: repeat(1,1fr);
+        padding-left: 70px;
+        padding-right: 70px;
+        grid-gap : 25px;
+    }
+    @include media ('<=375px') {
+        grid-template-columns: repeat(1,1fr);
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @include media ('<=320px') {
+        grid-template-columns: repeat(1,1fr);
+        padding-left: 30px;
+        padding-right: 30px;
+        grid-gap : 15px;
+    }
 }
 
 //row of grid elements
