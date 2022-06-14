@@ -60,7 +60,7 @@ const Country = () => {
                   <h2>{name}</h2>
                 </div>
                 <div className="details">
-                  <div>
+                  <div className="block1">
                     <h5>
                       Native Name: <span className="info-text">{nativeName}</span>
                     </h5>
@@ -77,7 +77,7 @@ const Country = () => {
                       Capital: <span className="info-text">{capital}</span>
                     </h5>
                   </div>
-                  <div>
+                  <div className="block2">
                     <h5>
                       Top Level Domain: <span className="info-text">{topLevelDomain}</span>
                     </h5>

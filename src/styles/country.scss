@@ -12,9 +12,14 @@
     top: 200px;
     @include media ("<=1020px") {
         display: block;
-        width: 80%;
+        width: 85%;
         margin: 0 auto;
         padding: 0;
+        
+    }
+    @include media ("<=600px") {
+        width: 90%;
+        margin-bottom: 100px;
     }
     .flag{
         width: 40%;
@@ -29,12 +34,27 @@
         }
         @include media ("<=600px"){
             width: 80%;
+            height: 80%;
+        }
+        @include media ("<=530px"){
+            width: 90%;
+            height: 70%;
+        }
+        @include media ("<=400px"){
+            width: 90%;
+            height: 60%;
+        }
+        @include media ("<=360px"){
+            width: 90%;
+            height: 50%;
         }
         img{
             height: 100%;
             width: 100%;
             object-fit: cover;
-            // border-radius: 0.5rem 0.5rem 0 0;
+            // @include media ("<=530px") {
+            //     height: 70%;
+            // }
         }
     }
     .country-details {
@@ -54,9 +74,15 @@
         @include media ("<=600px"){
             width: 80%;
         }
+        @include media ("<=530px"){
+            width: 90%;
+        }
         .country-name {
             padding-bottom: 20px;
             font-size: 1.3rem;
+            @include media ("<=530px") {
+                font-size: 1rem;
+            }
         }
         .details {
             display: flex;
@@ -68,6 +94,15 @@
             font-size: 1.2rem;
             .info-text{
                 font-weight: 400;
+            }
+            @include media ("<=460px"){
+                display: block;
+                font-size: 1rem;
+            }
+            .block1 {
+                @include media ("<=460px") {
+                    margin-bottom: 40px;
+                }
             }
         }
     }
