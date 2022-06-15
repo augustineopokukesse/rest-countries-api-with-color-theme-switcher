@@ -50,11 +50,41 @@ const Countries = () => {
         </div>
       ) : (
         <>
-          <Filter searchCountries={searchCountries} />
-          <section className="grid-container">
+          <div className="filter">
+            <Filter searchCountries={searchCountries} searchInput={searchInput} />
+          </div>
+          {searchInput.length > 0 ? <section className="grid-container">
+            {filtered.map((country) => {
+              const { numericCode, name, population, region, capital, flag } = country;
+
+              return (
+                <Link to={`/countries/${name}`} className="linkStyle darktheme">
+                  <article key={numericCode}>
+                    <div className="countries darktheme">
+                      <div className="country-flag">
+                        <img src={flag} alt={name} />
+                      </div>
+                      <div className="country-info">
+                        <h3>{name}</h3>
+                        <h4>
+                          <strong>Population</strong>: <span>{population}</span>
+                        </h4>
+                        <h4>
+                          <strong>Region</strong>: <span>{region}</span>
+                        </h4>
+                        <h4>
+                          <strong>Capital</strong>: <span>{capital}</span>
+                        </h4>
+                        
+                      </div>
+                    </div>
+                  </article>
+                </Link>
+              );
+          } )}
+      </section> : <section className="grid-container">
         {countries.map((country) => {
-          const { numericCode, name, population, region, capital, flag } =
-            country;
+          const { numericCode, name, population, region, capital, flag } = country;
 
           return (
             <Link to={`/countries/${name}`} className="linkStyle darktheme">
@@ -81,7 +111,7 @@ const Countries = () => {
             </Link>
           );
         })}
-      </section>
+      </section>}
         </>
       )}
     </>
