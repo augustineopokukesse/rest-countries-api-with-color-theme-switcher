@@ -8,6 +8,8 @@ const url = "https://restcountries.com/v2/all";
 const Countries = () => {
   // setting state values
   const [countries, setCountries] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
   // fetching data from the url
@@ -22,6 +24,23 @@ const Countries = () => {
     fetchCountryData();
   }, []);
 
+  // Create function to search for countries
+  const searchCountries = (searchValue) => {
+    setSearchInput(searchValue)
+
+    if (searchInput) {
+      const filteredCountries = countries.filter((country) =>
+        Object.values(country)
+          .join("")
+          .toLowerCase()
+          .includes(searchValue.toLowerCase())
+      )
+      setFiltered(filteredCountries)
+    } else {
+      setFiltered(countries)
+    }
+  }
+
   //   Map over countires data and display every details needed
   return (
     <>
@@ -31,7 +50,7 @@ const Countries = () => {
         </div>
       ) : (
         <>
-          <Filter />
+          <Filter searchCountries={searchCountries} />
           <section className="grid-container">
         {countries.map((country) => {
           const { numericCode, name, population, region, capital, flag } =
