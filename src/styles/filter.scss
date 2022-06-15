@@ -1,10 +1,21 @@
 .filter {
+    box-sizing: border-box;
     padding: 130px 40px 20px 40px;
-    width: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     input{
-        width: 100%;
+        width: 35%;
         border: none;
         padding: 10px 4px;
+        font-size: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+    }
+    select {
+        width: 15%;
+        padding-left: 10px;
+        padding-right: 5px;
+        border: none;
         font-size: 1rem;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
     }
