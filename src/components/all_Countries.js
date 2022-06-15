@@ -50,9 +50,7 @@ const Countries = () => {
         </div>
       ) : (
         <>
-          <div className="filter">
-            <Filter searchCountries={searchCountries} searchInput={searchInput} />
-          </div>
+          <Filter searchCountries={searchCountries} searchInput={searchInput} />
           {searchInput.length > 0 ? <section className="grid-container">
             {filtered.map((country) => {
               const { numericCode, name, population, region, capital, flag } = country;
