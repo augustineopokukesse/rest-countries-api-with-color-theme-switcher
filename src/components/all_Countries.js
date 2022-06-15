@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "../styles/all_Countries.scss";
 import Filter from "./Filter";
 
+
+
 const url = "https://restcountries.com/v2/all";
 
 const Countries = () => {
@@ -10,7 +12,10 @@ const Countries = () => {
   const [countries, setCountries] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [ region, setRegion ] = useState("")
   const [isLoading, setIsLoading] = useState(true);
+  console.log(filtered)
+  console.log(region)
 
   // fetching data from the url
   const fetchCountryData = async () => {
@@ -18,16 +23,15 @@ const Countries = () => {
     const countries = await response.json();
     setCountries(countries);
     setIsLoading(false);
-    //console.log(countries);
+    // console.log(countries);
   };
   useEffect(() => {
     fetchCountryData();
   }, []);
 
-  // Create function to search for countries
+  // Create functions to search for countries
   const searchCountries = (searchValue) => {
     setSearchInput(searchValue)
-
     if (searchInput) {
       const filteredCountries = countries.filter((country) =>
         Object.values(country)
@@ -35,11 +39,25 @@ const Countries = () => {
           .toLowerCase()
           .includes(searchValue.toLowerCase())
       )
-      setFiltered(filteredCountries)
+      setFiltered(filteredCountries);
     } else {
       setFiltered(countries)
     }
   }
+
+  const searchCountriesByRegion = (regionValue) => {
+    setRegion(regionValue)
+    if (region) {
+      const filteredCountries = countries.filter((country) => country.region === region)
+      setFiltered(filteredCountries);
+    } else {
+      setFiltered(countries)
+    } 
+  }
+
+  useEffect(() => {
+    searchCountriesByRegion(region)
+  })
 
   //   Map over countires data and display every details needed
   return (
@@ -50,8 +68,13 @@ const Countries = () => {
         </div>
       ) : (
         <>
-          <Filter searchCountries={searchCountries} searchInput={searchInput} />
-          {searchInput.length > 0 ? <section className="grid-container">
+          <Filter 
+            searchCountries={searchCountries}
+            searchInput={searchInput} 
+            searchCountriesByRegion={searchCountriesByRegion}
+            region={region} 
+          />
+          {(searchInput.length > 0 || region) ? <section className="grid-container">
             {filtered.map((country) => {
               const { numericCode, name, population, region, capital, flag } = country;
 

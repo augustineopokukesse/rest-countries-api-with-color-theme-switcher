@@ -1,8 +1,8 @@
 import "../styles/filter.scss"
-import {useState} from "react";
+//import {useState} from "react";
 
-function Filter({searchCountries, searchInput}) {
-    const [ region, setRegion ] = useState("");
+function Filter({searchCountries, searchInput, searchCountriesByRegion, region}) {
+    
     //const [ regionCountries, setRegionCountries] = useState([]);
     // const [ isLoading, setIsLoading ] = useState(true)
 
@@ -54,14 +54,14 @@ function Filter({searchCountries, searchInput}) {
                     name="select" 
                     id="select" 
                     value={region}
-                    onChange={(e) => setRegion(e.target.value)}
+                    onChange={(e) => searchCountriesByRegion(e.target.value)}
                     >
                     <option value="" disabled>Filter by Region</option>
-                    <option value="africa">Africa</option>
-                    <option value="americas">Americas</option>
-                    <option value="asia">Asia</option>
-                    <option value="europe">Europe</option>
-                    <option value="oceania">Oceania</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
                 </select>
             </div>
         </>
