@@ -3,7 +3,7 @@ import "../styles/filter.scss"
 function Filter({searchCountries, searchInput}) {
     return (
         <>
-            <div className="searchfilter">
+            <div className="filter">
                 <input 
                 type="search" 
                 name="search"
@@ -11,6 +11,7 @@ function Filter({searchCountries, searchInput}) {
                 placeholder="Search by country name"
                 value={searchInput}
                 onChange={(e) => searchCountries(e.target.value)}
+                autoComplete="off"
                 />
             </div>
         </>
