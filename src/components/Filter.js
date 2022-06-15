@@ -1,9 +1,9 @@
 import "../styles/filter.scss"
-import {useState, useEffect} from "react";
+import {useState} from "react";
 
 function Filter({searchCountries, searchInput}) {
     const [ region, setRegion ] = useState("");
-    const [ regionCountries, setRegionCountries] = useState([]);
+    //const [ regionCountries, setRegionCountries] = useState([]);
     // const [ isLoading, setIsLoading ] = useState(true)
 
     // const region =[
@@ -26,16 +26,16 @@ function Filter({searchCountries, searchInput}) {
 
     
 
-    useEffect(() => {
-        const fetchCountryByRegion = async() => {
-            const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
-            const data = await response.json();
-            setRegionCountries(data);
-            console.log(regionCountries)
-        } 
+    // useEffect(() => {
+    //     const fetchCountryByRegion = async() => {
+    //         const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+    //         const data = await response.json();
+    //         setRegionCountries(data);
+    //         console.log(regionCountries)
+    //     } 
         
-        fetchCountryByRegion()
-    }, [region])
+    //     fetchCountryByRegion()
+    // }, [region])
 
     return (
         <>
