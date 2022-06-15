@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/all_Countries.scss";
+import Filter from "./Filter";
 
 const url = "https://restcountries.com/v2/all";
 
@@ -29,7 +30,9 @@ const Countries = () => {
           <h1> Loading ...</h1>
         </div>
       ) : (
-        <section className="grid-container">
+        <>
+          <Filter />
+          <section className="grid-container">
         {countries.map((country) => {
           const { numericCode, name, population, region, capital, flag } =
             country;
@@ -60,6 +63,7 @@ const Countries = () => {
           );
         })}
       </section>
+        </>
       )}
     </>
   );
