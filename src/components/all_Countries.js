@@ -55,7 +55,7 @@ const Countries = () => {
   //     setFiltered(countries)
   //   } 
   // }
-// By region
+  // By region
   const searchCountriesByRegion = (regionValue) => {
     setRegion(regionValue)
   }  
