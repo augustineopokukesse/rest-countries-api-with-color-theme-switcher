@@ -5,7 +5,7 @@ function Header(){
         <>
           <header className="header darktheme">
             <div>
-                <h1 className="white">Where in the world?</h1>
+                <h1 className="main-text">Where in the world?</h1>
             </div>
             <div>
                 {<Toggle/>}

@@ -1,3 +1,5 @@
+@import 'breakpoints.scss';
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -10,9 +12,16 @@
     padding: 20px 40px;
     background-color: #F2F2F2;
     box-shadow: 0.5rem 0.5rem 1rem -1rem rgb(58, 57, 57);
-    .white{
-        font-size: 22px;
-        color: dark;
+    @include media ('<=415px') {
+        padding: 20px 20px;
+    }
+    .main-text{
+        @include media ('<=495px') {
+            font-size: 1.5rem;
+        }
+        @include media ('<=415px') {
+            font-size: 1.2rem;
+        }
     }
     // .dark{
     //     color: white;
