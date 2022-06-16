@@ -30,6 +30,7 @@ const Countries = () => {
   }, []);
 
   // Create functions to search for countries
+  // By name
   const searchCountries = (searchValue) => {
     setSearchInput(searchValue)
     if (searchInput) {
@@ -45,19 +46,24 @@ const Countries = () => {
     }
   }
 
+  // const searchCountriesByRegion = (regionValue) => {
+  //   setRegion(regionValue)
+  //   if (region) {
+  //     const filteredCountries = countries.filter((country) => country.region === region)
+  //     setFiltered(filteredCountries);
+  //   } else {
+  //     setFiltered(countries)
+  //   } 
+  // }
+// By region
   const searchCountriesByRegion = (regionValue) => {
     setRegion(regionValue)
-    if (region) {
-      const filteredCountries = countries.filter((country) => country.region === region)
-      setFiltered(filteredCountries);
-    } else {
-      setFiltered(countries)
-    } 
-  }
+  }  
 
   useEffect(() => {
-    searchCountriesByRegion(region)
-  })
+    const filteredCountries = countries.filter((country) => country.region === region)
+       setFiltered(filteredCountries);
+  }, [countries, region])
 
   //   Map over countires data and display every details needed
   return (
