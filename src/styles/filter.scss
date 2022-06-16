@@ -1,23 +1,51 @@
+@import 'breakpoints.scss';
+
 .filter {
     box-sizing: border-box;
     padding: 130px 40px 20px 40px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @include media ('<=495px') {
+        display: flex;
+        flex-direction: column;        
+    }
     input{
         width: 35%;
         border: none;
         padding: 10px 4px;
         font-size: 1rem;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+        @include media ('<=tablet') {
+            width: 45%;
+        }
+        @include media ('<=495px') {
+            margin-bottom: 20px;
+            width: 100%;
+            padding: 15px 10px;
+        }
     }
     select {
-        width: 15%;
+        width: 16%;
         padding-left: 10px;
         padding-right: 5px;
         border: none;
         font-size: 1rem;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+        // transform: translate(-50%, -50%);
         cursor: pointer;
+        @include media ('<=1024px') {
+            width: 22%;
+        }
+        @include media ('<=tablet') {
+            width: 27%;
+        }
+        @include media ('<=600px') {
+            width: 35%;
+        }
+        @include media ('<=495px') {
+            padding: 15px 10px;
+            width: 60%;
+        }
     }
 }
