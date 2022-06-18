@@ -101,9 +101,11 @@ const Country = () => {
                     <h3>Border Countries:</h3>
                     {borders.map((b) => {
                       return (
-                        <ul key={b}>
-                          <li>{b}</li>
-                        </ul>
+                        <Link to={`countries/${b}`}>
+                          <ul key={b}>
+                            <li>{b}</li>
+                          </ul>
+                        </Link>
                       );
                     })}
                   </div>
