@@ -25,7 +25,9 @@ const Country = () => {
   return (
     <>
       <div className="back-link">
-      <Link to="/" className="link">&larr; <span className="link-text darktheme">Back</span></Link>
+        <Link to="/" className="link">
+          &larr; <span className="link-text darktheme">Back</span>
+        </Link>
       </div>
       {isLoading ? (
         <div className="loadingState">
@@ -33,70 +35,83 @@ const Country = () => {
         </div>
       ) : (
         <section className="country-container">
-        {country.map((c) => {
-          const {
-            numericCode,
-            flag,
-            name,
-            nativeName,
-            population,
-            region,
-            subregion,
-            capital,
-            topLevelDomain,
-            currencies,
-            languages,
-            borders,
-          } = c;
+          {country.map((c) => {
+            const {
+              numericCode,
+              flag,
+              name,
+              nativeName,
+              population,
+              region,
+              subregion,
+              capital,
+              topLevelDomain,
+              currencies,
+              languages,
+              borders,
+            } = c;
 
-          return (
-            <article key={numericCode} className="country">
-              <div className="flag">
-                <img src={flag} alt={name}></img>
-              </div>
-              {/* divs */}
-              <div className="country-details">
-                <div className="country-name">
-                  <h2>{name}</h2>
+            return (
+              <article key={numericCode} className="country">
+                <div className="flag">
+                  <img src={flag} alt={name}></img>
                 </div>
-                <div className="details">
-                  <div className="block1">
-                    <h5>
-                      Native Name: <span className="info-text">{nativeName}</span>
-                    </h5>
-                    <h5>
-                      Population: <span className="info-text">{population}</span>
-                    </h5>
-                    <h5>
-                      Region: <span className="info-text">{region}</span>
-                    </h5>
-                    <h5>
-                      Sub Region: <span className="info-text">{subregion}</span>
-                    </h5>
-                    <h5>
-                      Capital: <span className="info-text">{capital}</span>
-                    </h5>
+                {/* divs */}
+                <div className="country-details">
+                  <div className="country-name">
+                    <h2>{name}</h2>
                   </div>
-                  <div className="block2">
-                    <h5>
-                      Top Level Domain: <span className="info-text">{topLevelDomain}</span>
-                    </h5>
-                    <h5>
-                      Currencies: <span className="info-text">{currencies[0].name}</span>
-                    </h5>
-                    <h5>
-                      Languages: <span className="info-text">{languages[0].name}</span>
-                    </h5>
+                  <div className="details">
+                    <div className="block1">
+                      <h5>
+                        Native Name:{" "}
+                        <span className="info-text">{nativeName}</span>
+                      </h5>
+                      <h5>
+                        Population:{" "}
+                        <span className="info-text">{population}</span>
+                      </h5>
+                      <h5>
+                        Region: <span className="info-text">{region}</span>
+                      </h5>
+                      <h5>
+                        Sub Region:{" "}
+                        <span className="info-text">{subregion}</span>
+                      </h5>
+                      <h5>
+                        Capital: <span className="info-text">{capital}</span>
+                      </h5>
+                    </div>
+                    <div className="block2">
+                      <h5>
+                        Top Level Domain:{" "}
+                        <span className="info-text">{topLevelDomain}</span>
+                      </h5>
+                      <h5>
+                        Currencies:{" "}
+                        <span className="info-text">{currencies[0].name}</span>
+                      </h5>
+                      <h5>
+                        Languages:{" "}
+                        <span className="info-text">{languages[0].name}</span>
+                      </h5>
+                    </div>
+                  </div>
+                  <div className="border-details">
+                    <h3>Border Countries:</h3>
+                    {borders.map((b) => {
+                      return (
+                        <ul key={b}>
+                          <li>{b}</li>
+                        </ul>
+                      );
+                    })}
                   </div>
                 </div>
-                <div className="border-details">
-                  <h3>Border Countries: {borders}</h3>
-                </div>
-              </div>
-            </article>
-          );
-        })}
-      </section>
+              </article>
+            );
+          })}
+        </section>
       )}
     </>
   );
