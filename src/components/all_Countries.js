@@ -14,8 +14,7 @@ const Countries = () => {
   const [searchInput, setSearchInput] = useState("");
   const [ region, setRegion ] = useState("")
   const [isLoading, setIsLoading] = useState(true);
-  console.log(filtered)
-  console.log(region)
+  
 
   // fetching data from the url
   const fetchCountryData = async () => {
@@ -87,11 +86,11 @@ const Countries = () => {
               return (
                 <Link to={`/countries/${name}`} className="linkStyle darktheme">
                   <article key={numericCode}>
-                    <div className="countries darktheme">
+                    <div className="countries">
                       <div className="country-flag">
                         <img src={flag} alt={name} />
                       </div>
-                      <div className="country-info">
+                      <div className="country-info darktheme">
                         <h3>{name}</h3>
                         <h4>
                           <strong>Population</strong>: <span>{population}</span>
