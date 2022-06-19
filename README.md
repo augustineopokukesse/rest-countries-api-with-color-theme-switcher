@@ -1,4 +1,4 @@
-# REACT WEATHER DATA
+# REST Countries API with colour theme switcher
 > This application allows the user to view all countries, and access detailed information about them. It uses the [REST Countries V2 API](https://restcountries.com/#api-endpoints-v2) to pull country data and display it.
 
 ## Features
