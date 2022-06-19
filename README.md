@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# REACT WEATHER DATA
+> This application allows the user to view all countries, and access detailed information about them. It uses the [REST Countries V2 API](https://restcountries.com/#api-endpoints-v2) to pull country data and display it.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+The user is able to
+- View the optimal layout for the site depending on their device's screen size
+- See all countries from the API on the homepage
+- Search for a country using the search field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode
 
-## Available Scripts
 
-In the project directory, you can run:
+>This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm start`
+## To Run
 
-Runs the app in the development mode.\
+Run `npm start` in the project root and the app will be available on port 3000, OR,
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You can view the deployed site at [https://restcountriesapiproject.netlify.app/](https://restcountriesapiproject.netlify.app/).
 
-### `npm test`
+<!-- ## State
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app's state is totally normalized, with slices for weather and user. -->
 
-### `npm run build`
+<!-- ## Routes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `/new-topic` – form to create a new topic
+- `/topics` – index of all topics
+- `/topics/:topicId` – page for an individual topic
+- `/new-quiz` – form to create a new quiz
+- `/quizzes` – index of all quizzes
+- `/quizzes/:quizId` – page for an individual quiz -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- ## To Test
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Enter email and password to login
+2. Select a country to view its weather information
+3. Select a city of a country to view its weather information
+4. Log out of the system after use. -->
 
-### `npm run eject`
+<!-- ## Table of Contents
+* [Technologies Used](#technologies-used)
+* [Project Status](#project-status)
+* [Acknowledgements](#acknowledgements)
+* [Contact](#contact) -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
+- JavaScript
+- React JS
+- React Router
+- GIT
+- HTML
+- CSS
+- SASS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<!-- ## Project Status
+Project is: complete -->
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- ## Acknowledgements
+- This project was based on the Frontend Engineering career path on (https://www.codecademy.com). -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Contributors
+- Augustine Opoku-Kesse
+- Emmanuel Eshun
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- ## Questions
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Is this appropriately scoped? Does it have too many features? Too few? -->
