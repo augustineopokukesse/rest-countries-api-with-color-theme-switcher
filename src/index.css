@@ -12,7 +12,10 @@ body {
   background-color: #F2F2F2;
   font-family: "Lato";
 }
-
+.dark{
+  background-color: #202C36;
+  color: #f7f4f4;
+}
 /* .dark{
   background-color: aqua;
   color: white;
