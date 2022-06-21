@@ -2,6 +2,8 @@
 .country {
     box-sizing: border-box;
     display: flex;
+    color: inherit;
+    background-color: inherit;
     // background-color: aqua;
     width: 100%;
     padding-left: 10%;
@@ -103,6 +105,20 @@
                 @include media ("<=460px") {
                     margin-bottom: 40px;
                 }
+            }
+        }
+    }
+    .border-details {
+        color: inherit;
+        background-color: inherit;
+        ul {
+            display: inline-block;
+            li {
+                text-decoration: none;
+                list-style: none;
+                width: 50px;
+                color: inherit ;
+                background-color: inherit;
             }
         }
     }
