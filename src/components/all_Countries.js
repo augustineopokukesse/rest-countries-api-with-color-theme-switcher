@@ -90,7 +90,7 @@ const Countries = () => {
                       <div className="country-flag">
                         <img src={flag} alt={name} />
                       </div>
-                      <div className="country-info darktheme">
+                      <div className="country-info">
                         <h3>{name}</h3>
                         <h4>
                           <strong>Population</strong>: <span>{population}</span>
@@ -113,9 +113,9 @@ const Countries = () => {
           const { numericCode, name, population, region, capital, flag } = country;
 
           return (
-            <Link to={`/countries/${name}`} className="linkStyle darktheme">
+            <Link to={`/countries/${name}`} className="linkStyle">
               <article key={numericCode}>
-                <div className="countries darktheme">
+                <div className="countries">
                   <div className="country-flag">
                     <img src={flag} alt={name} />
                   </div>
