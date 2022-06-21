@@ -21,7 +21,8 @@
     margin: 0 auto;
     padding: 20px 40px 20px 40px;
     box-sizing: border-box;
-    // background-color: #F2F2F2;
+    background-color: inherit;
+    color: inherit;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap : 50px;
@@ -65,7 +66,8 @@
     display: block;
     box-shadow: 0.5rem 0.5rem 2rem -1rem rgb(58, 57, 57);
     border-radius: 0.5rem;
-    background-color: white;
+    background-color: inherit;
+    color: inherit;
     height: 336px;
     .country-flag{
         height: 50%;
@@ -80,6 +82,8 @@
     .country-info{
         padding-top: 25px;
         padding-left: 20px;
+        background-color: inherit;
+        color: inherit;
         h3{
             margin-bottom: 20px;
             font-family: 'Lato';
@@ -95,7 +99,7 @@
 }
 .linkStyle{
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 

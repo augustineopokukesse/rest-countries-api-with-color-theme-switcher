@@ -84,7 +84,7 @@ const Countries = () => {
               const { numericCode, name, population, region, capital, flag } = country;
 
               return (
-                <Link to={`/countries/${name}`} className="linkStyle darktheme">
+                <Link to={`/countries/${name}`} className="linkStyle">
                   <article key={numericCode}>
                     <div className="countries">
                       <div className="country-flag">
