@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 import "../styles/country.scss";
 
 const Country = () => {
@@ -21,14 +21,19 @@ const Country = () => {
     fetchCountry();
   });
 
+  const history = useHistory();
+
   //   render infromation on page
   return (
     <>
-      <div className="back-link">
+      <button onClick={history.goBack} className="back-link darktheme">
+        &larr; <span className="link-text">Back</span>
+      </button>
+      {/* <div className="back-link">
         <Link to="/" className="link darktheme">
           &larr; <span className="link-text darktheme">Back</span>
         </Link>
-      </div>
+      </div> */}
       {isLoading ? (
         <div className="loadingState">
           <h1>Loading ...</h1>
