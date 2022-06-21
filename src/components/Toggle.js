@@ -6,9 +6,10 @@ function Toggle(){
     const [darkMode, setDarkMode] = useState(false)
 
     const changeTheme = () => {
+
         document.body.classList.toggle("dark");
         //document.getElementById("darktheme").classList.toggle("dark");
-        document.getElementsByClassName("modeText")[0].classList.toggle("dark");
+        //document.getElementsByClassName("modeText")[0].classList.toggle("dark");
         //document.getElementsByClassName("link")[0].classList.toggle("dark");
         const allClasses = document.getElementsByClassName("darktheme");
         for (let i = 0; i < allClasses.length; i++){
@@ -16,13 +17,13 @@ function Toggle(){
         }
         //document.getElementById("darkthemeCountries").classList.toggle("dark");
         setDarkMode(!darkMode);
-        console.log(allClasses)
+        // console.log(allClasses)
     }
     return (
         <>
             <button onClick={changeTheme} className="modeButton">
                 <span className="modeIcon">{darkMode ? <FaMoon className="iconColor" /> : <FaMoon />}</span>
-                <span className="modeText">{darkMode ? "Light Mode" : "Dark Mode"}</span>
+                <span className="modeText darktheme">{darkMode ? "Light Mode" : "Dark Mode"}</span>
             </button>
         </>
     )

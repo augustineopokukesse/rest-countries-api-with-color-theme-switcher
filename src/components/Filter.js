@@ -39,8 +39,9 @@ function Filter({searchCountries, searchInput, searchCountriesByRegion, region})
 
     return (
         <>
-            <div className="filter">
+            <div className="filter darktheme">
                 <input 
+                className="nameSearch darktheme"
                 type="search" 
                 name="search"
                 id="search"
@@ -51,6 +52,7 @@ function Filter({searchCountries, searchInput, searchCountriesByRegion, region})
                 />
 
                 <select 
+                    className="regionFilter darktheme"
                     name="select" 
                     id="select" 
                     value={region}

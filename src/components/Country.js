@@ -25,7 +25,7 @@ const Country = () => {
   return (
     <>
       <div className="back-link">
-        <Link to="/" className="link">
+        <Link to="/" className="link darktheme">
           &larr; <span className="link-text darktheme">Back</span>
         </Link>
       </div>
