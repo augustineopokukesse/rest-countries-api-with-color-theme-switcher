@@ -6,6 +6,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    background-color: inherit;
+    color: inherit;
     @include media ('<=495px') {
         display: flex;
         flex-direction: column;
@@ -17,6 +19,8 @@
         padding: 10px 4px;
         font-size: 1rem;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+        background-color: inherit;
+        color: inherit;
         @include media ('<=tablet') {
             width: 45%;
         }
@@ -33,6 +37,8 @@
         border: none;
         font-size: 1rem;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+        background-color: inherit;
+        color: inherit;
         // transform: translate(-50%, -50%);
         cursor: pointer;
         @include media ('<=1024px') {
