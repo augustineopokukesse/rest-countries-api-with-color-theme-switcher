@@ -22,7 +22,7 @@ const Countries = () => {
     const countries = await response.json();
     setCountries(countries);
     setIsLoading(false);
-    // console.log(countries);
+    console.log(countries);
   };
   useEffect(() => {
     fetchCountryData();
