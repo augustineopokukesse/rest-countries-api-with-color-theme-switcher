@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import { useParams, Link, useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import "../styles/country.scss";
+import Borders from "./BorderCountries";
 
 const Country = () => {
   const [country, setCountry] = useState([]);
@@ -15,12 +16,12 @@ const Country = () => {
       const country = await response.json();
       setCountry(country);
       setIsLoading(false);
-      //   console.log(country);
+      
     };
 
     fetchCountry();
   });
-
+  // console.log(country.borders);
   const history = useHistory();
 
   //   render infromation on page
@@ -55,7 +56,7 @@ const Country = () => {
               languages,
               borders,
             } = c;
-
+            
             return (
               <article key={numericCode} className="country">
                 <div className="flag">
@@ -104,15 +105,7 @@ const Country = () => {
                   </div>
                   <div className="border-details">
                     <h3>Border Countries:</h3>
-                    {borders.map((b) => {
-                      return (
-                        <Link to={`/${b}`}>
-                          <ul key={b}>
-                            <li>{b}</li>
-                          </ul>
-                        </Link>
-                      );
-                    })}
+                    <Borders borders={borders}/>
                   </div>
                 </div>
               </article>

@@ -22,7 +22,10 @@ const Countries = () => {
     const countries = await response.json();
     setCountries(countries);
     setIsLoading(false);
-    // console.log(countries);
+    console.log(countries);
+    const a = countries[8];
+    console.log(a);
+    console.log(typeof(a["alpha3Code"]));
   };
   useEffect(() => {
     fetchCountryData();
