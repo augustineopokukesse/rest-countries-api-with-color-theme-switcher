@@ -21,6 +21,15 @@
         box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
         background-color: inherit;
         color: inherit;
+        transition: all 0.1s ease-in-out;
+        &:focus{
+            outline: none;
+            border: none;
+        }
+        &:hover{
+            outline: 0.5px solid grey;
+            box-shadow: 2px 2px 9px -2px grey;
+        }
         @include media ('<=tablet') {
             width: 45%;
         }
@@ -41,6 +50,15 @@
         color: inherit;
         // transform: translate(-50%, -50%);
         cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        &:focus{
+            outline: none;
+            border: none;
+        }
+        &:hover{
+            outline: 0.5px solid grey;
+            box-shadow: 2px 2px 9px -2px grey;
+        }
         @include media ('<=1024px') {
             width: 22%;
         }
