@@ -3,6 +3,10 @@
     border: none;
     background-color: inherit;
     cursor: pointer;
+    &:focus{
+        outline: none;
+        border: none;
+    }
     &:hover{
         //box-shadow: 4px 3px 9px -1px gray;
         transition: all 0.4s ease;
