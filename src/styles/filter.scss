@@ -18,7 +18,7 @@
         border: none;
         padding: 10px 4px;
         font-size: 1rem;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
         background-color: inherit;
         color: inherit;
         @include media ('<=tablet') {
@@ -36,7 +36,7 @@
         padding-right: 5px;
         border: none;
         font-size: 1rem;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
         background-color: inherit;
         color: inherit;
         // transform: translate(-50%, -50%);
