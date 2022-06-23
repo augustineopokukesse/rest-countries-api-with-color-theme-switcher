@@ -23,9 +23,9 @@ const Countries = () => {
     setCountries(countries);
     setIsLoading(false);
     console.log(countries);
-    const a = countries[8];
-    console.log(a);
-    console.log(typeof(a["alpha3Code"]));
+    // const a = countries[8];
+    // console.log(a);
+    // console.log(typeof(a["alpha3Code"]));
   };
   useEffect(() => {
     fetchCountryData();

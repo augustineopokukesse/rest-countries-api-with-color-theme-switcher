@@ -103,7 +103,7 @@ const Country = () => {
                       </h5>
                     </div>
                   </div>
-                  <div className="border-details">
+                  <div>
                     <h3>Border Countries:</h3>
                     <Borders borders={borders}/>
                   </div>

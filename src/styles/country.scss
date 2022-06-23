@@ -8,7 +8,7 @@
     width: 100%;
     padding-left: 10%;
     // margin: 0 auto;
-    // margin-right: 0;
+    bottom: 100px;
     height: 50vh;
     position: relative;
     top: 200px;
@@ -108,20 +108,7 @@
             }
         }
     }
-    .border-details {
-        color: inherit;
-        background-color: inherit;
-        ul {
-            display: inline-block;
-            li {
-                text-decoration: none;
-                list-style: none;
-                width: 50px;
-                color: inherit ;
-                background-color: inherit;
-            }
-        }
-    }
+    
 }
 
 .back-link {

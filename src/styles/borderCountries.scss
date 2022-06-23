@@ -1,0 +1,20 @@
+.border-details {
+    color: inherit;
+    background-color: inherit;
+    ul {
+        color: inherit;
+        background-color: inherit;
+        display: inline-block;
+        li {
+            text-decoration: none;
+            list-style: none;
+            width: auto;
+            color: inherit;
+            background-color: inherit;
+            margin-right: 10px;
+            margin-top: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 5px 10px;
+        }
+    }
+}

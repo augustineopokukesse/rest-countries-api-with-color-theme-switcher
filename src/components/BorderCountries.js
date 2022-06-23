@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
+import "../styles/borderCountries.scss";
 
 const url = "https://restcountries.com/v2/all"; 
 
@@ -20,12 +21,12 @@ function Borders(borders) {
 
     return (
         <>
-            <section>
+            <section className="border-details">
                 {countries.filter((country) => borderCountries.includes(country["alpha3Code"]))
                     .map(selectedCountry => {
                         const { name } = selectedCountry;
                         return (
-                            <Link to={`/${name}`}>
+                            <Link to={`/countries/${name}`}>
                                 <ul key={name}>
                                     <li>{name}</li>
                                 </ul>
