@@ -26,7 +26,7 @@ function Borders(borders) {
                     .map(selectedCountry => {
                         const { name } = selectedCountry;
                         return (
-                            <Link to={`/countries/${name}`}>
+                            <Link to={`/countries/${name}`} className="border-links">
                                 <ul key={name}>
                                     <li>{name}</li>
                                 </ul>
