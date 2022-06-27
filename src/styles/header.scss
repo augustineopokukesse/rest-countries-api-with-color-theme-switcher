@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //position: relative;
     position: fixed;
     z-index: 5;
     width: 100%;
@@ -23,14 +22,9 @@
             font-size: 1.2rem;
         }
     }
-    // .dark{
-    //     color: white;
-    // }
+    
 }
-// #dark{
-//     background-color: aqua;
-//     color: white;
-//   }
+
 .dark{
     background-color: #202C36;
     color: #f7f4f4;

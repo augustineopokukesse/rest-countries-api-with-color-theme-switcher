@@ -5,8 +5,7 @@ import "../styles/borderCountries.scss";
 const url = "https://restcountries.com/v2/all"; 
 
 function Borders(borders) {
-    const [countries, setCountries] = useState([])
-    //console.log(borders.borders);
+    const [countries, setCountries] = useState([]);
     const borderCountries = borders.borders;
 
     const fetchCountries = async () => {

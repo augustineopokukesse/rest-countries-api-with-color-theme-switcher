@@ -48,7 +48,6 @@
         box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
         background-color: inherit;
         color: inherit;
-        // transform: translate(-50%, -50%);
         cursor: pointer;
         transition: all 0.1s ease-in-out;
         &:focus{
@@ -74,7 +73,6 @@
         }
         option {
             width: 100px !important;
-            //background-color: aqua;
             background-color: inherit;
             color: inherit;
         }

@@ -21,7 +21,7 @@ const Country = () => {
 
     fetchCountry();
   });
-  // console.log(country.borders);
+  
   const history = useHistory();
 
   //   render infromation on page
@@ -30,11 +30,7 @@ const Country = () => {
       <button onClick={history.goBack} className="back-link darktheme">
         &larr; <span className="link-text">Back</span>
       </button>
-      {/* <div className="back-link">
-        <Link to="/" className="link darktheme">
-          &larr; <span className="link-text darktheme">Back</span>
-        </Link>
-      </div> */}
+      
       {isLoading ? (
         <div className="loadingState">
           <h1>Loading ...</h1>

@@ -4,10 +4,8 @@
     display: flex;
     color: inherit;
     background-color: inherit;
-    // background-color: aqua;
     width: 100%;
     padding-left: 10%;
-    // margin: 0 auto;
     bottom: 100px;
     height: 50vh;
     position: relative;
@@ -54,16 +52,13 @@
             height: 100%;
             width: 100%;
             object-fit: cover;
-            // @include media ("<=530px") {
-            //     height: 70%;
-            // }
+            
         }
     }
     .country-details {
         display: block;
         width: 40%;
         height: 70%;
-        // margin: auto 0;
         padding: 2% 0 2% 10%;
         @include media ("<=1020px") {
             width: 60%;
@@ -91,8 +86,6 @@
             justify-content: space-between;
             line-height: 23px;
             padding-bottom: 50px;
-            // width: 100%;
-            // margin: auto;
             font-size: 1.2rem;
             .info-text{
                 font-weight: 400;
@@ -131,9 +124,7 @@
     cursor: pointer;
     font-size: 1rem;
     &:hover{
-        //box-shadow: 4px 3px 9px -1px gray;
         transition: all 0.4s ease;
-        //transform: translateY(-0.5px);
         background-color: rgba(168, 167, 167, 0.1);
     }
     .link-text {

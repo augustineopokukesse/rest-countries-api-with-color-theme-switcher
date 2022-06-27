@@ -22,10 +22,6 @@ const Countries = () => {
     const countries = await response.json();
     setCountries(countries);
     setIsLoading(false);
-    console.log(countries);
-    // const a = countries[8];
-    // console.log(a);
-    // console.log(typeof(a["alpha3Code"]));
   };
   useEffect(() => {
     fetchCountryData();
@@ -48,15 +44,6 @@ const Countries = () => {
     }
   }
 
-  // const searchCountriesByRegion = (regionValue) => {
-  //   setRegion(regionValue)
-  //   if (region) {
-  //     const filteredCountries = countries.filter((country) => country.region === region)
-  //     setFiltered(filteredCountries);
-  //   } else {
-  //     setFiltered(countries)
-  //   } 
-  // }
   // By region
   const searchCountriesByRegion = (regionValue) => {
     setRegion(regionValue)
