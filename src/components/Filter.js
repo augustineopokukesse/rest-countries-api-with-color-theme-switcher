@@ -23,12 +23,12 @@ function Filter({searchCountries, searchInput, searchCountriesByRegion, region})
                     value={region}
                     onChange={(e) => searchCountriesByRegion(e.target.value)}
                     >
-                    <option value="" disabled>Filter by Region</option>
-                    <option value="Africa">Africa</option>
-                    <option value="Americas">Americas</option>
-                    <option value="Asia">Asia</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Oceania">Oceania</option>
+                    <option className="opt" value="" disabled>Filter by Region</option>
+                    <option className="opt" value="Africa">Africa</option>
+                    <option className="opt" value="Americas">Americas</option>
+                    <option className="opt" value="Asia">Asia</option>
+                    <option className="opt" value="Europe">Europe</option>
+                    <option className="opt" value="Oceania">Oceania</option>
                 </select>
             </div>
         </>

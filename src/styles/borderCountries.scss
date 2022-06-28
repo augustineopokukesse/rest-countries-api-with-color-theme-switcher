@@ -1,6 +1,11 @@
+@import 'breakpoints.scss';
+
 .border-details {
     color: inherit;
     background-color: inherit;
+    @include media ('<=tablet') {
+        padding-bottom: 20px;
+    }
     .border-links {
         color: inherit;
         background-color: inherit;

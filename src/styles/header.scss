@@ -21,6 +21,9 @@
         @include media ('<=415px') {
             font-size: 1.2rem;
         }
+        @include media ('<=phone') {
+            font-size: 1rem;
+        }
     }
     
 }
