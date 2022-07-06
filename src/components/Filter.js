@@ -10,7 +10,7 @@ function Filter({searchCountries, searchInput, searchCountriesByRegion, region})
                 type="search" 
                 name="search"
                 id="search"
-                placeholder="Search by country name"
+                placeholder="&#xf002;   Search by country name"
                 value={searchInput}
                 onChange={(e) => searchCountries(e.target.value)}
                 autoComplete="off"
