@@ -24,6 +24,9 @@
         @include media ('<=phone') {
             font-size: 1rem;
         }
+        &:hover {
+            color: rgb(45, 51, 45);
+        }
     }
     
 }
@@ -32,3 +35,9 @@
     background-color: #202C36;
     color: #f7f4f4;
   }
+
+.linkStyle{
+    text-decoration: none;
+    color: inherit;
+    
+}  

@@ -3,6 +3,7 @@ import React from "react";
 import { useParams, useHistory } from "react-router-dom";
 import "../styles/country.scss";
 import Borders from "./BorderCountries";
+import Loading from "./Loading";
 
 const Country = () => {
   const [country, setCountry] = useState([]);
@@ -33,7 +34,7 @@ const Country = () => {
       
       {isLoading ? (
         <div className="loadingState">
-          <h1>Loading ...</h1>
+          <Loading />
         </div>
       ) : (
         <section className="country-container">

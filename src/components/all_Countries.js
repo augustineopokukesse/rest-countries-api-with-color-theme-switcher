@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/all_Countries.scss";
 import Filter from "./Filter";
+import Loading from "./Loading";
 
 
 
@@ -59,7 +60,7 @@ const Countries = () => {
     <>
       {isLoading ? (
         <div className="loadingState">
-          <h1> Loading ...</h1>
+          <Loading />
         </div>
       ) : (
         <>
