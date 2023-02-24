@@ -27,7 +27,7 @@ const Countries = () => {
   useEffect(() => {
     fetchCountryData();
   }, []);
-
+  console.log(countries);
   // Create functions to search for countries
   // By name
   const searchCountries = (searchValue) => {

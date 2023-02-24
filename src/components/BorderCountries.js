@@ -4,9 +4,10 @@ import "../styles/borderCountries.scss";
 
 const url = "https://restcountries.com/v2/all"; 
 
-function Borders(borders) {
+function Borders(props) {
     const [countries, setCountries] = useState([]);
-    const borderCountries = borders.borders;
+    const borderCountries = props.borders;
+    //console.log(borderCountries);
 
     const fetchCountries = async () => {
         const response = await fetch(url);
@@ -17,11 +18,12 @@ function Borders(borders) {
     useEffect(() => {
     fetchCountries();
     }, []);
+    //console.log(countries);
 
     return (
         <>
             <section className="border-details">
-                {countries.filter((country) => borderCountries.includes(country["alpha3Code"]))
+                {countries.filter((country) => borderCountries.includes(country.alpha3Code))
                     .map(selectedCountry => {
                         const { name } = selectedCountry;
                         return (

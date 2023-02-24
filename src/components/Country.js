@@ -9,19 +9,21 @@ const Country = () => {
   const [country, setCountry] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { name } = useParams();
+  // console.log(name);
 
   //   fetching data from url
   useEffect(() => {
     const fetchCountry = async () => {
       const response = await fetch(`https://restcountries.com/v2/name/${name}`);
       const country = await response.json();
-      setCountry(country);
+      setCountry([country[0]]);
       setIsLoading(false);
       
     };
 
     fetchCountry();
   });
+  console.log(country);
   
   const history = useHistory();
 
