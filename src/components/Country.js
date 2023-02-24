@@ -22,7 +22,7 @@ const Country = () => {
     };
 
     fetchCountry();
-  });
+  }, [name]);
   console.log(country);
   
   const history = useHistory();
