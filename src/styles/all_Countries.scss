@@ -59,7 +59,7 @@
     border-radius: 0.5rem;
     background-color: inherit;
     color: inherit;
-    height: 336px;
+    height: 350px;
     &:hover{
         transform: translateY(-10px);
         transition: all 0.3s ease-in-out;
@@ -82,7 +82,16 @@
         h3{
             margin-bottom: 20px;
             font-family: 'Nunito Sans';
-            font-size: 20px;
+            font-size: 1.3vw;
+            @include media ('<=1200px') {
+                font-size: 2vw;
+            }
+            @include media ('<=tablet'){
+                font-size: 2.7vw;
+            }
+            @include media ('<=495px'){
+                font-size: 3vw;
+            }
         }
         h4{
             margin-bottom: 5px;

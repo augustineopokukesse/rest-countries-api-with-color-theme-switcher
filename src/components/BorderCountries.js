@@ -23,7 +23,7 @@ function Borders(props) {
     return (
         <>
             <section className="border-details">
-                {countries.filter((country) => borderCountries.includes(country.alpha3Code))
+                {countries.filter((country) => borderCountries?.includes(country.alpha3Code))
                     .map(selectedCountry => {
                         const { name } = selectedCountry;
                         return (

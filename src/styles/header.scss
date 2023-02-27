@@ -5,11 +5,11 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    z-index: 5;
+    z-index: 9001;
     width: 100%;
     box-sizing: border-box;
     padding: 20px 40px;
-    background-color: inherit;
+    background-color: #F2F2F2;
     color: inherit;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
     @include media ('<=415px') {
